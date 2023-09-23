@@ -8,7 +8,7 @@ body{
     background-color: black;
 }
 header{
-    height: 95vh;
+    height: 98vh;
     width: 100%;
     background-image: url(food.jpg);
     background-position: center;
@@ -38,7 +38,7 @@ header{
     font-weight: bolder;
     font-size: 45px;
     color: red;
-    -webkit-text-stroke: 1px white; 
+    -webkit-text-stroke: 1px whitesmoke; 
 }
 
 .logo h1:hover{
@@ -119,13 +119,13 @@ a, ul{
   #header_text h2{
     color: blue;
     font-size: 70px;
+    -webkit-text-stroke: 1px whitesmoke;
 }
 
 #order_btn{
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: orange;
-    color: white;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     padding: 8px;
     margin: 30px 0 0 15px;
@@ -136,8 +136,9 @@ a, ul{
 }
 
 #order_btn a{
-    color: white;
-    font-family: "Roboto", sans-serif;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 #order_btn a:hover{
