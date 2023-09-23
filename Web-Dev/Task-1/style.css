@@ -114,7 +114,7 @@ a, ul{
   #header_text h2{
     color: blue;
     font-size: 70px;
-    -webkit-text-stroke: 1px whitesmoke;
+    -webkit-text-stroke: 1px black;
 }
 
 #order_btn{
@@ -128,17 +128,10 @@ a, ul{
 
 #order_btn:hover{
     background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
-#order_btn a{
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-#order_btn a:hover{
-    color: red;
-}
 
 #fb{
     height: 28px;
@@ -181,7 +174,7 @@ a, ul{
     border-radius: 50%;
 }
 
-#menu, .contact{
+#menu, #contact{
     text-align: center;
     color: red;
     background-color: black;
@@ -217,4 +210,39 @@ a, ul{
     margin-bottom: 10px;
     color: black;
     font-size: 20px;
+}
+
+#menu p{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#contact{
+    margin-top: 40px;
+}
+
+#contact_sec{
+    display: flex;
+    flex-direction: row;
+    padding-left: 70px;
+    padding-top: 30px;
+}
+
+.contact_details{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10px 20px 10px;
+    color: white;
+    font-size: 27px;
+    justify-content: center;
+}
+.icon{
+    width: 60%;
+    align-items: center;
+    background-color: orange;
+    border-radius: 100%;
+    margin-left: 75px;
+    margin-bottom: 10px;
 }
