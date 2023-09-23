@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body{
@@ -30,15 +30,14 @@ header{
 }
 
 .logo{
-    /* padding: 5px; */
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .logo h1{
     font-weight: bolder;
     font-size: 45px;
     color: red;
-    -webkit-text-stroke: 1px whitesmoke; 
+    -webkit-text-stroke: 1px white; 
 }
 
 .logo h1:hover{
@@ -52,7 +51,7 @@ a, ul{
 }
 
 .nav-bar{
-    padding-left: 270px;
+    padding-left: 200px;
 }
 
 .nav-bar ul{
@@ -69,6 +68,7 @@ a, ul{
 
 .nav-bar ul li a{
     color: white;
+    font-weight: bold;
 }
 
 .nav-bar ul li a:hover{
@@ -79,36 +79,31 @@ a, ul{
     display: flex;
 }
 
-/* .search_icon img{
-    height: 1px auto;
-    padding-left: 40px;
-} */
-
 .search-container {
     position: relative;
-    width: 200px; /* Adjust the width as needed */
+    width: 200px; 
   }
   
   #search {
     width: 100%;
     margin-top: 15px;
     border: none;
-    border-bottom: 1px solid black; /* Change the color to your desired underline color */
+    border-bottom: 1px solid black; 
     outline: none;
-    font-size: 16px; /* Adjust the font size as needed */
-    padding: 5px 0; /* Adjust padding as needed */
-    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+    font-size: 16px; 
+    padding: 5px 0; 
+    transition: border-bottom 0.3s ease; 
     background: transparent;
     color: white;
   }
   
   #search::placeholder {
     color: white;
-    opacity: 50%; /* Change the color of the placeholder text */
+    opacity: 50%; 
   }
   
   #search:focus {
-    border-bottom: 2px solid red; /* Change the color of the underline when focused */
+    border-bottom: 2px solid red; 
   }
   
   #header_text{
@@ -159,7 +154,9 @@ a, ul{
 
 .about{
     display: flex;
-    padding-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
 }
 
 .about p{
@@ -182,4 +179,42 @@ a, ul{
     background-repeat: no-repeat;
     height: 250px;
     border-radius: 50%;
+}
+
+#menu, .contact{
+    text-align: center;
+    color: red;
+    background-color: black;
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: orange;
+}
+
+.menu-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+    color: black;
+    font-size: 20px;
 }

@@ -10,16 +10,18 @@
     <header id="header">
       <div class="top-header">
         <a href="index.html">
-          <div class="logo"><h1>Foody</h1></div>
+          <div class="logo"><h1>FoodWave</h1></div>
         </a>
 
         <div class="nav-bar">
-          <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <nav>
+            <ul>
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
         </div>
 
         <div class="search_icon">
@@ -81,5 +83,66 @@
         </div>
       </div>
     </section>
+
+    <section id="menu">
+      <h1>Our Menu</h1>
+
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="biryani.jpg" alt="Food Item" />
+          <h3>Food Item 1</h3>
+          <p>Biryani</p>
+        </div>
+        <div class="menu-item">
+          <img src="nihari.jpg" alt="Food Item" />
+          <h3>Food Item 2</h3>
+          <p>Nihari</p>
+        </div>
+        <div class="menu-item">
+          <img src="haleem.jpg" alt="Food Item" />
+          <h3>Food Item 3</h3>
+          <p>Haleem</p>
+        </div>
+        <div class="menu-item">
+          <img src="pasta.jpg" alt="Food Item" />
+          <h3>Food Item 4</h3>
+          <p>Pasta</p>
+        </div>
+        <div class="menu-item">
+          <img src="pizza.jpg" alt="Food Item" />
+          <h3>Food Item 5</h3>
+          <p>Pizza</p>
+        </div>
+        <div class="menu-item">
+          <img src="burger.jpg" alt="Food Item" />
+          <h3>Food Item 6</h3>
+          <p>Burger</p>
+        </div>
+        <div class="menu-item">
+          <img src="tikka.jpg" alt="Food Item" />
+          <h3>Food Item 6</h3>
+          <p>Chicken Tikka</p>
+        </div>
+      </div>
+    </section>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const nav_items = document.querySelectorAll("nav a");
+
+      nav_items.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    });
+  </script>
 </html>
