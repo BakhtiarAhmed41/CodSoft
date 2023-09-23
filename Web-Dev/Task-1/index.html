@@ -160,6 +160,17 @@
   </body>
 
   <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".top-header");
+      const scrollY = window.scrollY;
+
+      if (scrollY > 100) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
     document.addEventListener("DOMContentLoaded", function () {
       const nav_items = document.querySelectorAll("nav a");
 

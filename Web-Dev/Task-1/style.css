@@ -20,9 +20,14 @@ header{
 .top-header{
     display: flex;
     background-color: transparent;
+    transition: background-color 0.3s ease; 
     padding: 8px;
     position: fixed;
 }
+
+.top-header.scrolled {
+    background-color: orange;
+  }
 
 .top-header:hover{
     background-color: orange;
@@ -41,6 +46,11 @@ header{
 }
 
 .logo h1:hover{
+    color: black;
+    -webkit-text-stroke: 1px red;
+}
+
+.top-header.scrolled .logo h1{
     color: black;
     -webkit-text-stroke: 1px red;
 }
@@ -164,7 +174,7 @@ a, ul{
 }
 
 .about_img{
-    padding: 70px 100px;
+    padding: 50px 100px;
 }
 
 .about_img img{
