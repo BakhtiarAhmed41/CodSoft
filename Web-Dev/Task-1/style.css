@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
 }
 
 body{
@@ -27,6 +26,7 @@ header{
 
 .top-header.scrolled {
     background-color: orange;
+    width: 100%;
   }
 
 .top-header:hover{
@@ -230,6 +230,7 @@ a, ul{
 
 #contact{
     margin-top: 40px;
+    margin-bottom: 90px;
 }
 
 #contact_sec{
@@ -248,6 +249,7 @@ a, ul{
     font-size: 27px;
     justify-content: center;
 }
+
 .icon{
     width: 60%;
     align-items: center;
@@ -256,3 +258,74 @@ a, ul{
     margin-left: 75px;
     margin-bottom: 10px;
 }
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+
+#footer_logo{
+    width: 30%;
+}
+
+#footer_logo img{
+    width: 350px;
+    height: 350px;
+}
+
+#footer_nav{
+    width: 30%;
+    padding: 50px;
+    padding-right: 100px;
+    padding-bottom: 0px;
+    align-items: center;
+}
+
+#footer_nav a{
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#footer_nav a:hover{
+    color: red;
+}
+
+#footer_nav ul li{
+    margin-top: 18px;
+    text-align: center;
+}
+
+.nav_items{
+    margin-bottom: 200px;
+}
+
+#map img{
+    height: 280px;
+    width: 280px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+#copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+}
+
+#copyright:before,
+#copyright:after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: white;
+    margin: 10px 10px;
+}
+
+
