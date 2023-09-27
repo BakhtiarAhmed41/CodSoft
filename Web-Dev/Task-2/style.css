@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(3, 3, 31);
+}
+
+a{
+    text-decoration: none;
+}
+
+#top_header{
+    display: flex;
+    flex-direction: row;
+}
+#logo{
+    color: white;
+    padding: 27px;
+    width: fit-content;
+    font-size: large;
+}
+
+#nav{
+    width: fit-content;
+    padding: 30px;
+    padding-left: 450px;
+}
+
+#menu{
+    color: white;
+    font-size: large;
+    /* border: 2px black ; */
+    padding: 7px;
+}
+
+#menu:active{
+    border: 2px red;
+}
+
+#contact_btn{
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: 2px black;
+    border-radius: 5px;
+    background-color: red;
+    padding: 10px;
+}
+
+#cntct_btn{
+    margin-top: 30px;
+    margin-left: 350px;
+
+}
