@@ -8,31 +8,71 @@
   </head>
   <body>
     <header id="top">
+      <video id="bg_video" autoplay muted loop src="bg_video3.mp4"></video>
       <div id="top_header">
-        <div id="logo">
-          <h1><span style="color: red">My</span>Portfolio</h1>
-        </div>
+        <a href="index.html"
+          ><div id="logo">
+            <h1><span> My</span>Portfolio</h1>
+          </div>
+        </a>
 
         <div id="nav">
-          <select name="menu" id="menu">
-            <a href="#top"><option value="Top">Top</option></a>
-            <option value="About"><a href="#about">About</a></option>
-            <option value="Education">
-              <a href="#education">Education</a>
+          <!-- <label for="menu">Choose an option:</label> -->
+          <select name="menu" id="menu" onchange="navigate()">
+            <option value="Top" data-link="#top">Top</option>
+            <option value="About" data-link="#about">About</option>
+            <option value="Education" data-link="#education">Education</option>
+            <option value="Skills" data-link="#skills">Skills</option>
+            <option value="Experience" data-link="#experience">
+              Experience
             </option>
-            <option value="Skills"><a href="#skills">Skills</a></option>
-            <option value="Experience">
-              <a href="#experience">Experience</a>
-            </option>
-            <option value="Projects"><a href="#projects">Projects</a></option>
-            <option value="Contact"><a href="#contact">Contact</a></option>
+            <option value="Projects" data-link="#projects">Projects</option>
+            <option value="Contact" data-link="#contact">Contact</option>
           </select>
         </div>
 
         <a href="#contact" id="cntct_btn">
-          <div id="contact_btn">Contact Me</div></a
-        >
+          <div id="contact_btn">Contact Me</div>
+        </a>
+      </div>
+
+      <div id="main_header">
+        <div id="header_txt">
+          <h2>
+            My Name is
+            <span class="typing-text" data-text="Bakhtiar Ahmed..."
+              >Bakhtiar Ahmed...</span
+            >
+          </h2>
+
+          <div class="wrapper">
+            <p id="fixed_text">I'm a</p>
+
+            <div class="words">
+              <span></span>
+              <span>Programmer</span>
+              <span>Web Developer</span>
+              <span>App Developer</span>
+              <span>Freelancer</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="my_img">
+          <img src="my_image.png" alt="My Image" />
+        </div>
       </div>
     </header>
   </body>
+
+  <script>
+    function navigate() {
+      const selectElement = document.getElementById("menu");
+      const selectedOption = selectElement.options[selectElement.selectedIndex];
+      const link = selectedOption.getAttribute("data-link");
+      if (link) {
+        window.location.href = link;
+      }
+    }
+  </script>
 </html>
