@@ -30,7 +30,10 @@ a{
     color: white;
 }
 
-
+select option{
+    background-color: #071012;
+    color: white;
+}
 
 #nav{
     width: fit-content;
@@ -40,30 +43,30 @@ a{
 
 #menu{
     font-size: large;
-    color: blue;
+    color: white;
     border: none;
     background: transparent;
     border: 1px solid white;
     padding: 7px;
 }
 
-#contact_btn{
+#resume_btn{
     color: white;
     font-size: 20px;
     font-weight: bold;
-    border: 1px solid white;
+    border: 1px solid red;
     border-radius: 5px;
     padding: 8px;
+    text-shadow: salmon;
 }
-#contact_btn:hover{
+#resume_btn:hover{
     color: red;
     border: 1px solid blue;
 }
 
-#cntct_btn{
-    margin-top: 30px;
+#resume{
+    margin-top: 25px;
     margin-left: 350px;
-
 }
 
 #main_header{
