@@ -203,3 +203,78 @@ select option{
     margin-top: 80px;
     border-radius: 100%;
 }
+
+/* Mobile devices (portrait) */
+@media (max-width: 767px) {
+    #top_header {
+      flex-direction: column; /* Change to a single-column layout */
+    }
+  
+    #logo {
+      padding: 15px; /* Reduce logo padding */
+      font-size: medium; /* Adjust font size */
+    }
+  
+    #nav {
+      padding: 15px; /* Reduce padding for navigation */
+      padding-left: 0; /* Remove left padding */
+      text-align: center; /* Center-align navigation */
+    }
+  
+    #menu {
+      font-size: small; /* Adjust font size */
+      padding: 5px; /* Reduce padding */
+    }
+  
+    #resume_btn {
+      font-size: small; /* Adjust font size */
+      padding: 5px; /* Reduce padding */
+    }
+  
+    #resume {
+      margin-left: 0; /* Remove left margin */
+    }
+  
+    #header_txt {
+      width: 100%; /* Full width for header text */
+      padding: 50px 20px 10px 20px; /* Adjust padding */
+      text-align: center; /* Center-align text */
+    }
+  
+    .typing-text {
+      font-size: 40px; /* Adjust font size */
+    }
+  
+    #fixed_text {
+      font-size: 30px; /* Adjust font size */
+    }
+  
+    .wrapper {
+      height: auto; /* Remove fixed height */
+      padding: 20px 15px; /* Adjust padding */
+    }
+  
+    .words span {
+      font-size: 30px; /* Adjust font size */
+    }
+  
+    #my_img {
+      width: 50%; /* Adjust image width */
+    }
+  
+    #my_img img {
+      width: 80%; /* Adjust image width */
+      margin-top: 30px; /* Reduce margin top */
+    }
+  }
+  
+  /* Mobile devices (landscape) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Add specific styles for landscape-oriented mobile devices if needed */
+  }
+  
+  /* Tablets and larger */
+  @media (min-width: 1024px) {
+    /* Add specific styles for tablets and larger screens if needed */
+  }
+  
