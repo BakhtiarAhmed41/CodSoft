@@ -87,10 +87,6 @@ select option{
     }
 }
 
-
-    
-
-
 #bg_video{
     position: absolute;
     bottom: 0;
@@ -195,76 +191,84 @@ select option{
   }
 
 #my_img{
-    width: 30%;
+    width: 350px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 190px;
+    animation: bounce 2s ease 1s infinite alternate;    
+}
+
+@keyframes bounce {
+100% {
+  margin-left: 90px;
+  opacity: 0.5;
+}  
 }
 
 #my_img img{
-    width: 70%;
-    margin-top: 80px;
-    border-radius: 100%;
+  
+    width: 400px;
+    height: 400px;
 }
 
-/* Mobile devices (portrait) */
 @media (max-width: 767px) {
     #top_header {
-      flex-direction: column; /* Change to a single-column layout */
+      flex-direction: column;
     }
   
     #logo {
-      padding: 15px; /* Reduce logo padding */
-      font-size: medium; /* Adjust font size */
+      padding: 15px; 
+      font-size: medium; 
     }
   
     #nav {
-      padding: 15px; /* Reduce padding for navigation */
-      padding-left: 0; /* Remove left padding */
-      text-align: center; /* Center-align navigation */
+      padding: 15px; 
+      padding-left: 0; 
+      text-align: center; 
     }
   
     #menu {
-      font-size: small; /* Adjust font size */
-      padding: 5px; /* Reduce padding */
-    }
+      font-size: small; 
+      padding: 5px;   }
   
     #resume_btn {
-      font-size: small; /* Adjust font size */
-      padding: 5px; /* Reduce padding */
-    }
+      font-size: small; 
+      padding: 5px;   }
   
     #resume {
-      margin-left: 0; /* Remove left margin */
+      margin-left: 0; 
     }
   
     #header_txt {
-      width: 100%; /* Full width for header text */
-      padding: 50px 20px 10px 20px; /* Adjust padding */
-      text-align: center; /* Center-align text */
+      width: 100%; 
+      padding: 50px 20px 10px 20px; 
+      text-align: center; 
     }
   
     .typing-text {
-      font-size: 40px; /* Adjust font size */
+      font-size: 40px;
     }
   
     #fixed_text {
-      font-size: 30px; /* Adjust font size */
+      font-size: 30px; 
     }
   
     .wrapper {
-      height: auto; /* Remove fixed height */
-      padding: 20px 15px; /* Adjust padding */
+      height: auto; 
+      padding: 20px 15px; 
     }
   
     .words span {
-      font-size: 30px; /* Adjust font size */
+      font-size: 30px; 
     }
   
     #my_img {
-      width: 50%; /* Adjust image width */
+      width: 50%; 
     }
   
     #my_img img {
-      width: 80%; /* Adjust image width */
-      margin-top: 30px; /* Reduce margin top */
+      width: 80%; 
+      margin-top: 30px; 
     }
   }
   
