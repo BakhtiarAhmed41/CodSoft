@@ -18,7 +18,6 @@
           </a>
 
           <div id="nav">
-            <!-- <label for="menu">Choose an option:</label> -->
             <select name="menu" id="menu" onchange="navigate()">
               <option value="Top" data-link="#top">Top</option>
               <option value="About" data-link="#about">About</option>
@@ -70,18 +69,102 @@
           <img src="header_img.png" alt="" />
         </div>
       </div>
-      <!-- <a href="My_Resume.pdf" id="resume" target="_blank">
-        <div id="resume_btn">My Resume</div> -->
     </header>
+
+    <section id="about">
+      <div class="about hidden">
+        <div id="about_txt">
+          <h1>Who am I?</h1>
+          <p>
+            I'm a dedicated software engineering student at NED University,
+            deeply enthusiastic about coding and technology. With a strong
+            foundation in programming and a relentless commitment to learning, I
+            actively seek opportunities to expand my skills. My goal is to make
+            a meaningful impact in the ever-evolving world of software
+            engineering and contribute to innovative projects. Let's connect and
+            explore the limitless possibilities in this dynamic field!
+          </p>
+        </div>
+
+        <div id="my_img">
+          <img src="my_image-removebg-preview.png" alt="My Image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h1>My Education</h1>
+      <div class="timeline">
+        <div class="container left">
+          <div class="text-box">
+            <h2>Ned University Of Engineering & Technology</h2>
+            <p>Software Engineering Undergraduate</p>
+            <small> 2021-2025 </small>
+          </div>
+        </div>
+
+        <div class="container right">
+          <div class="text-box">
+            <h2>Adamjee Government Science College</h2>
+            <p>Intermediate (Pre-Engineering)</p>
+            <small> 2019-2021</small>
+          </div>
+        </div>
+
+        <div class="container left">
+          <div class="text-box">
+            <h2>Federal Secondary School</h2>
+            <p>Matriculation (Science)</p>
+            <small>2007-2019</small>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 
   <script>
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function handleScroll() {
+      const aboutSection = document.querySelector(".about");
+      if (isElementInViewport(aboutSection)) {
+        aboutSection.classList.add("visible");
+        window.removeEventListener("scroll", handleScroll);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    document.querySelectorAll(".nav_items").forEach((item) => {
+      item.addEventListener("click", scrollToSection);
+    });
+
     function navigate() {
-      const selectElement = document.getElementById("menu");
-      const selectedOption = selectElement.options[selectElement.selectedIndex];
-      const link = selectedOption.getAttribute("data-link");
-      if (link) {
-        window.location.href = link;
+      const selectedOption = document.getElementById("menu");
+      const selectedValue =
+        selectedOption.options[selectedOption.selectedIndex].getAttribute(
+          "data-link"
+        );
+
+      const targetSection = document.querySelector(selectedValue);
+
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
       }
     }
   </script>
