@@ -296,6 +296,15 @@ select option{
   border: 1px solid lightblue;
 }
 
+/* Initially hide the education section */
+/* Initially position the education section off-screen */
+/* Initially hide the education section */
+#education {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 1s;
+}
+
 
 #education h1{
   color: red;
@@ -318,26 +327,65 @@ select option{
 .timeline::after{
   content: "";
   position: absolute;
-  width: 6px;
+  width: 7px;
   height: 104%;
-  background: red;
+  background: white;
   top: 0;
   left: 55.5%;
   margin-left: -3px;
   z-index: -1;
+  animation:  moveline 6s linear forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+
+@keyframes moveline {
+    0%{
+      height: 0;
+      opacity: 1;
+    }
+    100%{
+      height: 100;
+      opacity: 1;
+    }
 }
 
 .container{
   padding: 10px 30px;
   position: relative;
   width: 50%;
-  background: lightblue;
+  /* background: lightblue; */
   top: 12px;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes movedown{
+  0%{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container:nth-child(1){
+  animation-delay: 4s;
+}
+
+.container:nth-child(2){
+  animation-delay: 6s;
+}
+.container:nth-child(3){
+  animation-delay: 7s;
 }
 
 .text-box{
   padding: 40px 30px;
   background-color: black;
+  border: 1px solid lightblue;
   color: white;
   position: relative;
   border-radius: 6px;
@@ -359,6 +407,95 @@ select option{
 
 .right{
   left: 56%;
+}
+
+.container img{
+  position: absolute;
+  width: 30px;
+  border-radius: 100%;
+  right: -20px;
+  top: 43%;
+  z-index: 10;
+}
+
+.right img{
+  left: -20px;
+}
+
+#left_arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid white;
+  right: -15px;
+}
+
+#right_arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid white;
+  left: -15px;
+}
+
+/* just for timeline */
+
+@media screen and (max-width: 768px) {
+  
+  #education {
+  }
+  
+  #education h1{
+    margin-left: 250px;
+    margin-top: 30px;
+    font-size: 35px;
+    width: fit-content;
+    text-align: left;
+    
+  }
+   .timeline{
+    margin: 50px auto;
+   }
+
+   .timeline::after{
+    left: 31px;
+   }
+
+   .container{
+    width: 80%;
+    padding-left: 60px;
+    padding-right: 25px;
+   }
+
+   .text-box{
+    font-size: 13px;
+   }
+
+   .text-box small{
+    margin-bottom: 10px;
+   }
+
+   .right{
+    left: 0;
+   }
+
+   .left img, .right img{
+    left: 10px;
+   }
+
+   #left_arrow, #right_arrow{
+    border-right: 15px solid black;
+    border-left: 0;
+    left: -15px;
+   }
 }
 
 
@@ -899,7 +1036,7 @@ select option{
 @media screen and (min-width: 437px) and (max-width: 526px){
 
   *{
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
     #top_header {
@@ -951,7 +1088,7 @@ select option{
     }
     #header_txt {
       width: 100%; 
-      padding: 80px 0px 5px 75px; 
+      padding: 80px 0px 5px 35px; 
     }
   
     #header_txt h2{
@@ -1001,7 +1138,16 @@ select option{
       width: 220px;
       height: 220px;
     }
-    
+ 
+    #education h1{
+      margin-left: 150px;
+      margin-top: 50px;
+      font-size: 35px;
+      width: fit-content;
+      text-align: left;
+      
+    }
+
 }
 
 @media screen and (min-width: 527px) and (max-width: 618px){

@@ -96,26 +96,32 @@
       <h1>My Education</h1>
       <div class="timeline">
         <div class="container left">
+          <img src="timeline_img.png" alt="" />
           <div class="text-box">
             <h2>Ned University Of Engineering & Technology</h2>
             <p>Software Engineering Undergraduate</p>
             <small> 2021-2025 </small>
+            <span id="left_arrow"></span>
           </div>
         </div>
 
         <div class="container right">
+          <img src="timeline_img.png" alt="" />
           <div class="text-box">
             <h2>Adamjee Government Science College</h2>
             <p>Intermediate (Pre-Engineering)</p>
             <small> 2019-2021</small>
+            <span id="right_arrow"></span>
           </div>
         </div>
 
         <div class="container left">
+          <img src="timeline_img.png" alt="" />
           <div class="text-box">
             <h2>Federal Secondary School</h2>
             <p>Matriculation (Science)</p>
             <small>2007-2019</small>
+            <span id="left_arrow"></span>
           </div>
         </div>
       </div>
@@ -167,5 +173,64 @@
         });
       }
     }
+
+    // Function to handle the intersection of the section
+    function handleIntersection(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.display = "block";
+          observer.unobserve(entry.target); // Stop observing once displayed
+        }
+      });
+    }
+
+    // Function to handle the intersection of the section
+    function handleIntersection(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.visibility = "visible";
+          observer.unobserve(entry.target); // Stop observing once displayed
+        }
+      });
+    }
+
+    // Set up the Intersection Observer
+    const educationSection = document.getElementById("education");
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null, // Use the viewport as the root
+      rootMargin: "0px", // No margin
+      threshold: 0.5, // Trigger when at least 50% of the element is visible
+    });
+
+    observer.observe(educationSection);
+
+    // Function to handle the intersection of inner elements
+    function handleInnerIntersection(entries, innerObserver) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add class or trigger animations for inner elements here
+          // For example, if you have an inner element with id "inner-animation":
+          // entry.target.querySelector("#inner-animation").classList.add("animate");
+
+          // Stop observing once inner elements are displayed
+          innerObserver.unobserve(entry.target);
+        }
+      });
+    }
+
+    // Set up Intersection Observer for inner elements
+    const innerElements = document.querySelectorAll(
+      "#education .inner-element"
+    );
+    innerElements.forEach((element) => {
+      const innerObserver = new IntersectionObserver(handleInnerIntersection, {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px", // No margin
+        threshold: 0.5, // Trigger when at least 50% of the element is visible
+      });
+
+      innerObserver.observe(element);
+    });
   </script>
 </html>
