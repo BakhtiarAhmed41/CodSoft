@@ -476,13 +476,66 @@ select option{
 
 @media screen and (max-width: 768px) {
   
+  *{
+    overflow: scroll;
+  }
+
+  .about {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #about_txt {
+    width: 100%;
+    text-align: left;
+    padding: 15px 15px 15px 15px;
+  }
+  
+  #about_txt p {
+    padding: 47px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-shadow:  1px 1px 2px;
+  }
+
+
+  #about_txt h1 {
+    color: red;
+    width: fit-content;
+    margin-left: 130px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  
+  #my_img{
+    width: fit-content;
+  }
+
+  #my_img img{
+    margin-top: 0px;
+    width: 150px;
+    height: auto;
+    /* /* box-shadow: 0px 0px; */
+    /* border: 0px solid #091115; */
+
+  box-shadow: 0px 0px 0px 0px ;
+  border: 1px solid lightblue;
+  }
+
+
   #education h1{
-    margin-left: 250px;
+    margin-left: 100px;
     margin-top: 30px;
     font-size: 35px;
     width: fit-content;
     text-align: left;
-    
   }
    .timeline{
     margin: 50px auto;
@@ -519,14 +572,39 @@ select option{
     border-left: 0;
     left: -15px;
    }
+
+   #skills h1{
+    margin-left: 130px;
+    margin-top: 30px;
+    font-size: 35px;
+    width: fit-content;
+    text-align: left;
+   }
+
+   .skills{
+    width: 100%;
+    display: grid;
+    margin-left: 70px;
+    grid-template-columns: 30% 30%;
+    /* gap: 30px; */
+    place-items: left;
+  }
+
+  .skill img{
+    width: 100px;
+    height: 100px;
+  
+  }
+  
+  .skill h3{
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+  }
 }
 
 
 @media screen and (max-width: 285px){
-
-  *{
-    overflow: hidden;
-  }
 
     #top_header {
       flex-direction: column;
@@ -631,10 +709,6 @@ select option{
 }
 @media screen and (min-width: 286px) and (max-width: 300px){
 
-  *{
-    overflow: hidden;
-  }
-
     #top_header {
       flex-direction: column;
     }
@@ -738,9 +812,6 @@ select option{
 
 @media screen and (min-width: 301px) and (max-width: 340px){
 
-  *{
-    overflow: hidden;
-  }
 
     #top_header {
       flex-direction: column;
@@ -844,10 +915,6 @@ select option{
 }
 @media screen and (min-width: 341px) and (max-width: 388px){
 
-  *{
-    overflow: hidden;
-  }
-
     #top_header {
       flex-direction: column;
     }
@@ -950,10 +1017,6 @@ select option{
     
 }
 @media screen and (min-width: 389px) and (max-width: 436px){
-
-  *{
-    overflow: hidden;
-  }
 
     #top_header {
       flex-direction: column;
@@ -1171,10 +1234,6 @@ select option{
 
 @media screen and (min-width: 527px) and (max-width: 618px){
 
-  *{
-    overflow: hidden;
-  }
-
     #top_header {
       flex-direction: row;
     }
@@ -1273,10 +1332,6 @@ select option{
 }
 
 @media screen and (min-width: 619px) and (max-width: 670px){
-
-  *{
-    overflow: hidden;
-  }
 
     #top_header {
       flex-direction: row;
@@ -1377,9 +1432,6 @@ select option{
 
 @media screen and (min-width: 671px) and (max-width: 720px){
 
-  *{
-    overflow: hidden;
-  }
 
     #top_header {
       flex-direction: row;
@@ -1480,9 +1532,6 @@ select option{
 
 @media screen and (min-width: 721px) and (max-width: 768px){
 
-  *{
-    overflow: hidden;
-  }
 
     #top_header {
       flex-direction: row;
