@@ -296,9 +296,7 @@ select option{
   border: 1px solid lightblue;
 }
 
-/* Initially hide the education section */
-/* Initially position the education section off-screen */
-/* Initially hide the education section */
+
 #education {
   opacity: 0;
   visibility: hidden;
@@ -306,13 +304,13 @@ select option{
 }
 
 
-#education h1{
+#education h1, #skills h1{
   color: red;
   text-align: center;
-  font-size: 55px;
-  text-shadow: 2px 5px 20px;
-  -webkit-text-stroke: 1px white;
-  box-shadow: 2px 5px 20px 2px blue;
+  font-size: 50px;
+  /* text-shadow: 2px 5px 20px; */
+  /* -webkit-text-stroke: 1px white; */
+  box-shadow: 2px 5px 20px 5px blue;
   width: fit-content;
   margin-left: 550px;
 }
@@ -394,10 +392,12 @@ select option{
 
 .text-box p{
   color: blue;
+  font-weight: bold;
   padding: 10px 0px;
 }
 .text-box small{
   color: red;
+  font-weight: bold;
 }
 
 .left{
@@ -446,12 +446,35 @@ select option{
   left: -15px;
 }
 
-/* just for timeline */
+.skills{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  place-items: center;
+}
+
+.skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.skill img{
+  width: 130px;
+  height: 130px;
+
+}
+
+.skill h3{
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
 
 @media screen and (max-width: 768px) {
-  
-  #education {
-  }
   
   #education h1{
     margin-left: 250px;
@@ -1034,10 +1057,6 @@ select option{
     
 }
 @media screen and (min-width: 437px) and (max-width: 526px){
-
-  *{
-    /* overflow: hidden; */
-  }
 
     #top_header {
       flex-direction: column;

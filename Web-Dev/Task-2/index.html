@@ -126,6 +126,53 @@
         </div>
       </div>
     </section>
+
+    <section id="skills">
+      <h1>My Skills</h1>
+
+      <div class="skills">
+        <div class="skill">
+          <img src="python_logo.png" alt="" />
+          <h3>PYTHON</h3>
+        </div>
+        <div class="skill">
+          <img src="c++_logo.png" alt="" />
+          <h3>C++</h3>
+        </div>
+        <div class="skill">
+          <img src="js_logo.png" alt="" />
+          <h3>JAVASCRIPT</h3>
+        </div>
+        <div class="skill">
+          <img src="html_logo.png" alt="" />
+          <h3>HTML</h3>
+        </div>
+        <div class="skill">
+          <img src="css_logo.png" alt="" />
+          <h3>CSS</h3>
+        </div>
+        <div class="skill">
+          <img src="react_logo.png" alt="" />
+          <h3>REACT JS</h3>
+        </div>
+        <div class="skill">
+          <img src="wordpress_logo.png" alt="" />
+          <h3>WORDPRESS</h3>
+        </div>
+        <div class="skill">
+          <img src="php_logo.png" alt="" />
+          <h3>PHP</h3>
+        </div>
+        <div class="skill">
+          <img src="flutter_logo.png" alt="" />
+          <h3>FLUTTER</h3>
+        </div>
+        <div class="skill">
+          <img src="dart_logo.png" alt="" />
+          <h3>DART</h3>
+        </div>
+      </div>
+    </section>
   </body>
 
   <script>
@@ -204,33 +251,5 @@
     });
 
     observer.observe(educationSection);
-
-    // Function to handle the intersection of inner elements
-    function handleInnerIntersection(entries, innerObserver) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Add class or trigger animations for inner elements here
-          // For example, if you have an inner element with id "inner-animation":
-          // entry.target.querySelector("#inner-animation").classList.add("animate");
-
-          // Stop observing once inner elements are displayed
-          innerObserver.unobserve(entry.target);
-        }
-      });
-    }
-
-    // Set up Intersection Observer for inner elements
-    const innerElements = document.querySelectorAll(
-      "#education .inner-element"
-    );
-    innerElements.forEach((element) => {
-      const innerObserver = new IntersectionObserver(handleInnerIntersection, {
-        root: null, // Use the viewport as the root
-        rootMargin: "0px", // No margin
-        threshold: 0.5, // Trigger when at least 50% of the element is visible
-      });
-
-      innerObserver.observe(element);
-    });
   </script>
 </html>
