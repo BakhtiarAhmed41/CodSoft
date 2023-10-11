@@ -129,7 +129,6 @@
 
     <section id="skills">
       <h1>My Skills</h1>
-
       <div class="skills">
         <div class="skill">
           <img src="python_logo.png" alt="" />
@@ -156,12 +155,12 @@
           <h3>REACT JS</h3>
         </div>
         <div class="skill">
-          <img src="wordpress_logo.png" alt="" />
-          <h3>WORDPRESS</h3>
-        </div>
-        <div class="skill">
           <img src="php_logo.png" alt="" />
           <h3>PHP</h3>
+        </div>
+        <div class="skill">
+          <img src="wordpress_logo.png" alt="" />
+          <h3>WORDPRESS</h3>
         </div>
         <div class="skill">
           <img src="flutter_logo.png" alt="" />
@@ -221,35 +220,64 @@
       }
     }
 
-    // Function to handle the intersection of the section
     function handleIntersection(entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.display = "block";
-          observer.unobserve(entry.target); // Stop observing once displayed
+          observer.unobserve(entry.target);
         }
       });
     }
 
-    // Function to handle the intersection of the section
     function handleIntersection(entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = "1";
           entry.target.style.visibility = "visible";
-          observer.unobserve(entry.target); // Stop observing once displayed
+          observer.unobserve(entry.target);
         }
       });
     }
 
-    // Set up the Intersection Observer
     const educationSection = document.getElementById("education");
     const observer = new IntersectionObserver(handleIntersection, {
-      root: null, // Use the viewport as the root
-      rootMargin: "0px", // No margin
-      threshold: 0.5, // Trigger when at least 50% of the element is visible
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
     });
 
     observer.observe(educationSection);
+
+    function isElementInView(element) {
+      var rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    var skillsSection = document.querySelector(".skills");
+    var skillItems = document.querySelectorAll(".skill");
+
+    function fadeInSkillsOnScroll() {
+      if (isElementInView(skillsSection)) {
+        skillsSection.style.opacity = 1;
+        skillItems.forEach(function (item, index) {
+          setTimeout(function () {
+            item.style.opacity = 1;
+          }, index * 300);
+        });
+
+        window.removeEventListener("scroll", fadeInSkillsOnScroll);
+      }
+    }
+
+    window.addEventListener("scroll", fadeInSkillsOnScroll);
+
+    fadeInSkillsOnScroll();
   </script>
 </html>
