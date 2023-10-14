@@ -237,15 +237,15 @@ select option{
 
 .about {
   margin-top: 160px;
-  margin-bottom: 55px;
+  margin-bottom: 25px;
   display: flex;
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.5s ease-in-out;
 }
 
-.visible {
+/* .visible {
   opacity: 1;
-}
+} */
 
 
 #about_txt {
@@ -294,9 +294,9 @@ select option{
 
 
 #my_img img{
-  margin-top: 50px;
+  margin-top: 70px;
   /* background-color: rgba(241, 243, 245, 0.986); */
-  width: 280px;
+  width: 260px;
   height: auto;
   border-radius: 100%;
   box-shadow: 0px 0px 50px 10px rgb(43, 151, 187);
@@ -304,11 +304,11 @@ select option{
 }
 
 
-#education {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s, visibility 1s;
-}
+/* #education { */
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* transition: opacity 1s, visibility 1s; */
+/* } */
 
 
 #education h1, #skills h1, #projects h1{
@@ -338,12 +338,12 @@ select option{
   top: 0;
   left: 55.5%;
   margin-left: -3px;
-  z-index: -1;
+  /* z-index: -1; */
   animation:  moveline 6s linear forwards;
-  opacity: 0;
-  animation-delay: 23s;
+  /* opacity: 0; */
+  /* animation-delay: 23s; */
 }
-
+/* 
 @keyframes moveline {
     0%{
       height: 0;
@@ -353,7 +353,7 @@ select option{
       height: 100;
       opacity: 1;
     }
-}
+} */
 
 .container{
   padding: 10px 30px;
@@ -361,11 +361,11 @@ select option{
   width: 50%;
   /* background: lightblue; */
   top: 12px;
-  animation: movedown 3s linear forwards;
-  opacity: 0;
+  /* animation: movedown 3s linear forwards; */
+  /* opacity: 0; */
 }
 
-@keyframes movedown{
+/* @keyframes movedown{
   0%{
     opacity: 1;
     transform: translateY(-30px);
@@ -374,9 +374,9 @@ select option{
     opacity: 1;
     transform: translateY(0px);
   }
-}
+} */
 
-.container:nth-child(1){
+/* .container:nth-child(1){
   animation-delay: 24s;
 }
 
@@ -385,7 +385,7 @@ select option{
 }
 .container:nth-child(3){
   animation-delay: 27s;
-}
+} */
 
 .text-box{
   padding: 40px 30px;
@@ -422,7 +422,7 @@ select option{
   border-radius: 100%;
   right: -20px;
   top: 43%;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .right img{
@@ -434,7 +434,7 @@ select option{
   width: 0;
   position: absolute;
   top: 40%;
-  z-index: 1;
+  /* z-index: 1; */
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid white;
@@ -446,13 +446,16 @@ select option{
   width: 0;
   position: absolute;
   top: 40%;
-  z-index: 1;
+  /* z-index: 1; */
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid white;
   left: -15px;
 }
 
+#skills{
+  margin-top: 170px;
+}
 
 .skills {
   width: 100%;
@@ -460,14 +463,14 @@ select option{
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   place-items: center;
-  opacity: 0; 
+  /* opacity: 0;  */
 }
 
 .skill {
   flex: 1;
   text-align: center;
   transition: opacity 1s ease; 
-  opacity: 0; 
+  /* opacity: 0;  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -533,12 +536,156 @@ select option{
   font-size: 15px;
 }
 
+.contact{
+  display: grid;
+  grid-template-columns: 35% 15% 50% ;
+  background: black;
+}
+
+
+.cntct_form {
+  grid-column: 3;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cntct_details{
+  padding: 50px;
+  width: 100%;
+  /* margin-left: 100px; */
+  margin-top: 30px;
+}
+
+.cntct_info{
+  width: 100%;
+  /* background-color: lightcyan; */
+  margin-top: 50px;
+  margin-left: 20px;
+  /* padding: 10px; */
+  border-radius: 5px;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+}
+
+.icon a{
+  font-size: 22px;
+}
+
+.email img{
+  width: 30px;
+  margin-left: 10px;
+  height: auto;
+}
+
+.icon p{
+font-weight: bold;
+font-size: 25px;
+color: #fff;
+}
+
+.email p, .ph p{
+  margin-left: 10px;
+}
+
+.ph{
+margin-top: 15px;
+margin-left: 6px;
+}
+
+.ph img{
+  width: 35px;
+  height: auto;
+}
+
+.social_icons{
+  display: flex;
+  gap: 15px;
+  margin-left: 13px;
+  margin-top: 40px;
+}
+
+.social_icons a img{
+  width: 27px;
+  height: auto;
+}
+
+#fb{
+  width: 27px;
+}
+
+.cntct_details h1{
+  color: red;
+  box-shadow: 2px 2px 12px 2px #fff;
+  font-size: 40px;
+  margin-left: 30px;
+  width: fit-content;
+  padding: 5px;
+  /* background-color: ; */
+  text-align: center;
+}
+
+.cntct_form h2 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.cntct_form button {
+  background-color: blue;
+  color: #fff;
+  padding: 10px 10px;
+  margin-left: 35%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  
+}
+
+.cntct_form button:hover {
+  background-color: #2675b7;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
+
   
-  *{
+  /* *{
     overflow: scroll;
-  }
+  } */
 
   .about {
     margin-top: 60px;
@@ -635,20 +782,13 @@ select option{
    }
 
    #skills h1{
-    margin-left: 130px;
-    margin-top: 30px;
-    font-size: 35px;
-    width: fit-content;
-    text-align: left;
-   }
-   #projects h1{
-    margin-left: 120px;
-    margin-top: 30px;
-    font-size: 35px;
-    width: fit-content;
-    text-align: left;
-   }
-
+     margin-left: 130px;
+     margin-top: 30px;
+     font-size: 35px;
+     width: fit-content;
+     text-align: left;
+    }
+    
    .skills{
     width: 100%;
     height: max-content;
@@ -659,12 +799,12 @@ select option{
     place-items: left;
     opacity: 1;
   }
-
+  
   .skill{
     opacity: 1;
   }
-
-
+  
+  
   .skill img{
     width: 100px;
     height: 100px;
@@ -676,7 +816,15 @@ select option{
     font-size: 16px;
     margin-top: 10px;
   }
-
+  
+  #projects h1{
+   margin-left: 120px;
+   margin-top: 30px;
+   font-size: 35px;
+   width: fit-content;
+   text-align: left;
+  }
+  
   .projects{
     display: grid;
     grid-template-columns: 100%;
@@ -720,11 +868,17 @@ select option{
     font-size: 14px;
   }
   
+  .cntct_form {
+    max-width: 100%;
+}
   
 }
 
 
 @media screen and (max-width: 285px){
+  #top{
+      overflow: hidden;
+    }
 
     #top_header {
       flex-direction: column;
@@ -828,6 +982,9 @@ select option{
     
 }
 @media screen and (min-width: 286px) and (max-width: 300px){
+  #top{
+      overflow: hidden;
+    }
 
     #top_header {
       flex-direction: column;
@@ -931,6 +1088,9 @@ select option{
 }
 
 @media screen and (min-width: 301px) and (max-width: 340px){
+  #top{
+      overflow: hidden;
+    }
 
 
     #top_header {
@@ -1034,6 +1194,9 @@ select option{
     
 }
 @media screen and (min-width: 341px) and (max-width: 388px){
+  #top{
+      overflow: hidden;
+    }
 
     #top_header {
       flex-direction: column;
@@ -1138,8 +1301,14 @@ select option{
 }
 @media screen and (min-width: 389px) and (max-width: 436px){
 
+
+    #top{
+      overflow: hidden;
+    }
+
     #top_header {
       flex-direction: column;
+
     }
   
     #top_header_pt1{
@@ -1240,6 +1409,9 @@ select option{
     
 }
 @media screen and (min-width: 437px) and (max-width: 526px){
+  #top{
+      overflow: hidden;
+    }
 
     #top_header {
       flex-direction: column;
@@ -1353,6 +1525,9 @@ select option{
 }
 
 @media screen and (min-width: 527px) and (max-width: 618px){
+  #top{
+      overflow: hidden;
+    }
 
     #top_header {
       flex-direction: row;
@@ -1452,6 +1627,9 @@ select option{
 }
 
 @media screen and (min-width: 619px) and (max-width: 670px){
+  #top{
+      overflow: hidden;
+    }
 
     #top_header {
       flex-direction: row;
@@ -1551,6 +1729,9 @@ select option{
 }
 
 @media screen and (min-width: 671px) and (max-width: 720px){
+  #top{
+      overflow: hidden;
+    }
 
 
     #top_header {
@@ -1651,6 +1832,9 @@ select option{
 }
 
 @media screen and (min-width: 721px) and (max-width: 768px){
+  #top{
+      overflow: hidden;
+    }
 
 
     #top_header {
