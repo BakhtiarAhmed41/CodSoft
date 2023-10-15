@@ -20,7 +20,6 @@
 
           <div id="horizontal_nav">
             <ul id="horizontal_menu">
-              <!-- <li><a href="#top">Top</a></li> -->
               <li><a href="#about" class="nav_items">About</a></li>
               <li><a href="#education" class="nav_items">Education</a></li>
               <li><a href="#skills" class="nav_items">Skills</a></li>
@@ -330,26 +329,6 @@
   </body>
 
   <script>
-    // function isElementInViewport(el) {
-    //   const rect = el.getBoundingClientRect();
-    //   return (
-    //     rect.top >= 0 &&
-    //     rect.left >= 0 &&
-    //     rect.bottom <=
-    //       (window.innerHeight || document.documentElement.clientHeight) &&
-    //     rect.right <=
-    //       (window.innerWidth || document.documentElement.clientWidth)
-    //   );
-    // }
-
-    // function handleScroll() {
-    //   const aboutSection = document.querySelector(".about");
-    //   if (isElementInViewport(aboutSection)) {
-    //     aboutSection.classList.add("visible");
-    //     window.removeEventListener("scroll", handleScroll);
-    //   }
-    // }
-
     window.addEventListener("scroll", handleScroll);
 
     document.querySelectorAll(".nav_items").forEach((item) => {
@@ -374,83 +353,5 @@
         });
       }
     }
-
-    document.querySelectorAll(".nav_items").forEach((item) => {
-      item.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = item.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          const yOffset = -50; // Adjust as needed to offset for any fixed header
-          const y =
-            targetElement.getBoundingClientRect().top +
-            window.pageYOffset +
-            yOffset;
-
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      });
-    });
-
-    // function handleIntersection(entries, observer) {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       entry.target.style.display = "block";
-    //       observer.unobserve(entry.target);
-    //     }
-    //   });
-    // }
-
-    // function handleIntersection(entries, observer) {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       entry.target.style.opacity = "1";
-    //       entry.target.style.visibility = "visible";
-    //       observer.unobserve(entry.target);
-    //     }
-    //   });
-    // }
-
-    // const educationSection = document.getElementById("education");
-    // const observer = new IntersectionObserver(handleIntersection, {
-    //   root: null,
-    //   rootMargin: "0px",
-    //   threshold: 0.5,
-    // });
-
-    // observer.observe(educationSection);
-
-    // function isElementInView(element) {
-    //   var rect = element.getBoundingClientRect();
-    //   return (
-    //     rect.top >= 0 &&
-    //     rect.left >= 0 &&
-    //     rect.bottom <=
-    //       (window.innerHeight || document.documentElement.clientHeight) &&
-    //     rect.right <=
-    //       (window.innerWidth || document.documentElement.clientWidth)
-    //   );
-    // }
-
-    // var skillsSection = document.querySelector(".skills");
-    // var skillItems = document.querySelectorAll(".skill");
-
-    // function fadeInSkillsOnScroll() {
-    //   if (isElementInView(skillsSection)) {
-    //     skillsSection.style.opacity = 1;
-    //     skillItems.forEach(function (item, index) {
-    //       setTimeout(function () {
-    //         item.style.opacity = 1;
-    //       }, index * 300);
-    //     });
-
-    //     window.removeEventListener("scroll", fadeInSkillsOnScroll);
-    //   }
-    // }
-
-    // window.addEventListener("scroll", fadeInSkillsOnScroll);
-
-    // fadeInSkillsOnScroll();
   </script>
 </html>
