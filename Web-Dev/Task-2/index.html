@@ -18,6 +18,17 @@
             </div>
           </a>
 
+          <div id="horizontal_nav">
+            <ul id="horizontal_menu">
+              <!-- <li><a href="#top">Top</a></li> -->
+              <li><a href="#about" class="nav_items">About</a></li>
+              <li><a href="#education" class="nav_items">Education</a></li>
+              <li><a href="#skills" class="nav_items">Skills</a></li>
+              <li><a href="#projects" class="nav_items">Projects</a></li>
+              <li><a href="#contact" class="nav_items">Contact</a></li>
+            </ul>
+          </div>
+
           <div id="nav">
             <select name="menu" id="menu" onchange="navigate()">
               <option value="Top" data-link="#top">Top</option>
@@ -363,6 +374,24 @@
         });
       }
     }
+
+    document.querySelectorAll(".nav_items").forEach((item) => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = item.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const yOffset = -50; // Adjust as needed to offset for any fixed header
+          const y =
+            targetElement.getBoundingClientRect().top +
+            window.pageYOffset +
+            yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      });
+    });
 
     // function handleIntersection(entries, observer) {
     //   entries.forEach((entry) => {
