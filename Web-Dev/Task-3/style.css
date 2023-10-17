@@ -11,7 +11,7 @@ body{
 }
 
 #calculator{
-    height: 325px;
+    height: 385px;
     border: 2px groove black;
     padding: 15px;
     background-color: black;
@@ -23,7 +23,7 @@ body{
 display: grid;
 width: 100%;
 grid-template-columns: 64px 64px 64px 64px ;
-grid-template-rows: 50px 50px 50px 50px;
+grid-template-rows: 50px 50px 50px 50px 50px;
 column-gap: 10px;
 row-gap: 15px;
 }
@@ -35,11 +35,15 @@ row-gap: 15px;
     font-size: 20px;
     color: black;
     cursor: pointer;
+    border: 2px solid white;
+
+    
 }
 
 .btn:hover{
-    background-color: red;
+    background-color: black;
     color: white;
+
 }
 
 #display input{
@@ -52,4 +56,13 @@ row-gap: 15px;
     border: 1px solid red;
     font-size: 25px;
     font-weight: bold;
+}
+
+.del{
+    grid-column: 1/4;
+}
+
+.plus{
+    grid-row: 3/5;
+    grid-column: 4;
 }

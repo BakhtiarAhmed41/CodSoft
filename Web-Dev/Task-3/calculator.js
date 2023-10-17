@@ -12,6 +12,10 @@ Array.from(buttons).forEach((button)=>{
         string = "";
         document.querySelector('input').value = string;
     }
+    else if(evaluate.target.innerHTML == 'Delete'){
+        string = string.slice(0,-1);
+     document.querySelector('input').value = string;
+    }
 
     else{
         string =string + evaluate.target.innerHTML;
