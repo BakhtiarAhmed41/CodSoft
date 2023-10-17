@@ -53,7 +53,7 @@ row-gap: 15px;
     padding-bottom: 10px;
     margin-bottom: 25px;
     border-radius: 8px;
-    border: 1px solid red;
+    border: 1px double red;
     font-size: 25px;
     font-weight: bold;
 }
