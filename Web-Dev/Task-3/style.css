@@ -59,7 +59,7 @@ row-gap: 15px;
 }
 
 .del{
-    grid-column: 1/4;
+    grid-column: 1/3;
 }
 
 .plus{
