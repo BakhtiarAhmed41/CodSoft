@@ -1039,7 +1039,7 @@ textarea {
   } */
 
   .about {
-    margin-top: 60px;
+    margin-top: 90px;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
@@ -1066,7 +1066,7 @@ textarea {
   #about_txt h1 {
     color: red;
     width: fit-content;
-    margin-left: 130px;
+    margin-left: 110px;
     margin-bottom: 10px;
     text-align: center;
     font-size: 35px;
@@ -1119,12 +1119,12 @@ textarea {
     margin-bottom: 10px;
    }
 
-   .right{
+   .right, .left{
     left: 0;
    }
 
    .left img, .right img{
-    left: 10px;
+    left: 17px;
    }
 
    #left_arrow, #right_arrow{
@@ -1134,7 +1134,7 @@ textarea {
    }
 
    #skills h1{
-     margin-left: 130px;
+     margin-left: 110px;
      margin-top: 30px;
      font-size: 35px;
      width: fit-content;
@@ -1170,7 +1170,7 @@ textarea {
   }
   
   #projects h1{
-   margin-left: 120px;
+   margin-left: 100px;
    margin-top: 30px;
    font-size: 35px;
    width: fit-content;
@@ -1229,7 +1229,7 @@ textarea {
   display: flex;
   flex-direction: column;
   background: black;
-  padding-bottom: 400px;
+  padding-bottom: 200px;
 }
 
 
@@ -1266,23 +1266,23 @@ textarea {
 }
 
 .icon a{
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .email img{
-  width: 25px;
+  width: 22px;
   margin-left: 5px;
   height: auto;
 }
 
 .icon p{
 font-weight: bold;
-font-size: 19px;
+font-size: 16px;
 color: #fff;
 }
 
 .email p, .ph p{
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .ph{
@@ -1291,14 +1291,14 @@ margin-left: 3px;
 }
 
 .ph img{
-  width: 25px;
+  width: 22px;
   height: auto;
 }
 
 .social_icons{
   display: flex;
   gap: 15px;
-  margin-left: 7px;
+  margin-left: 5px;
   margin-top: 20px;
 }
 
