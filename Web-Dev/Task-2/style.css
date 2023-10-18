@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Slab:wght@800&family=Signika:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -40,7 +40,7 @@ a{
 }
 
 #logo:hover{
-    color: blue
+    color: rgb(41, 221, 221);
 }
 
 #logo span{
@@ -77,7 +77,7 @@ select option{
   color: #fff; 
   padding: 4px;
   font-weight: bold;
-  font-size: 22px; 
+  font-size: 20px; 
 }
 #horizontal_menu a:hover {
   color: red; 
@@ -164,11 +164,13 @@ select option{
     text-shadow:  1px 1px 2px;
     padding: 150px 20px 30px 70px;
     font-size: 20px;
+    font-family: 'Young Serif', serif;;
 }
 
 .typing-text {
     position: relative;
-    font-size: 60px;
+    font-size: 50px;
+    font-weight: 100;
     white-space : nowrap;
     color: rgb(0,0,0,0);
   }
@@ -197,7 +199,7 @@ select option{
   }
 
   #fixed_text{
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .wrapper{
@@ -212,10 +214,10 @@ select option{
   }
   .words span{
     display: block;
-    font-size: 50px;
-    color: blue;
-    -webkit-text-stroke: 1px black;
-    font-weight: bold;
+    font-size: 40px;
+    color: rgb(41, 221, 221);
+    /* -webkit-text-stroke: 1px black; */
+    font-weight: 200;
     height: 100%;
     padding-left: 10px;
     animation: dynamic_words 6s infinite;
@@ -325,7 +327,7 @@ select option{
   margin-left: 290px;
   text-align: center;
   font-size: 50px;
-  box-shadow: 2px 5px 20px 5px blue;
+  box-shadow: 2px 5px 20px 5px rgb(41, 221, 221);
 }
 
 
@@ -343,7 +345,7 @@ select option{
   color: red;
   text-align: center;
   font-size: 50px;
-  box-shadow: 2px 5px 20px 5px blue;
+  box-shadow: 2px 5px 20px 5px rgb(41, 221, 221);
   width: fit-content;
   margin-left: 550px;
 }
@@ -391,7 +393,7 @@ select option{
 }
 
 .text-box p{
-  color: blue;
+  color: rgb(82, 226, 231);
   font-weight: bold;
   padding: 10px 0px;
 }
@@ -659,6 +661,26 @@ textarea {
 .cntct_form button:hover {
   background-color: #2675b7;
 }
+
+#copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  background-color: black;
+  font-size: 15px;
+  color: white;
+}
+
+#copyright:before,
+#copyright:after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: white;
+  margin: 10px 10px;
+}
+
 
 
 @media screen and (max-width: 1340px){
@@ -1029,6 +1051,7 @@ textarea {
     height: 250px;
   }
   
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1170,7 +1193,7 @@ textarea {
   }
   
   #projects h1{
-   margin-left: 100px;
+   margin-left: 75px;
    margin-top: 30px;
    font-size: 35px;
    width: fit-content;
@@ -1190,7 +1213,7 @@ textarea {
     border-radius: 10px;
     text-align: center;
     margin: 40px;
-    padding: 20px;
+    padding: 10px;
     padding-top: 20px;
     background-color: rgb(0, 0, 0);
   }
@@ -1206,18 +1229,18 @@ textarea {
     font-weight: bold;
     padding-top: 15px;
     padding-bottom: 30px;
-    font-size: 15px;
+    font-size: 14px;
   }
   
   .project a{
     color: white;
-    font-size: 15px;
+    font-size: 14px;
   }
   
   .project a span{
     color: blue;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
   }
   
   .cntct_form {
@@ -1229,7 +1252,6 @@ textarea {
   display: flex;
   flex-direction: column;
   background: black;
-  padding-bottom: 200px;
 }
 
 
@@ -1315,7 +1337,7 @@ margin-left: 3px;
   color: red;
   box-shadow: 2px 2px 12px 2px #fff;
   font-size: 30px;
-  margin-left: 60px;
+  margin-left: 25px;
   width: fit-content;
   padding: 5px;
 }
@@ -1326,6 +1348,13 @@ margin-left: 3px;
   color: white;
 }
   
+footer{
+  /* padding-bottom: 100px; */
+  padding-top: 50px;
+  background-color: black;
+}
+
+
 }
 
 
