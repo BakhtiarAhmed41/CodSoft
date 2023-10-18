@@ -1,31 +1,37 @@
-let string = "";
+let expression = "";
 let buttons = document.querySelectorAll('.btn');
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click', (evaluate)=>{
        
     if(evaluate.target.innerHTML == '='){
-        try{string = eval(string);
-        document.querySelector('input').value = string;}
+        try{expression = eval(expression);
+        document.querySelector('input').value = expression;}
+
         catch(error){
-            string = "Plz input correct data";
-            // document.querySelector("input").style.color = "red";
+            expression = "Plz enter correct data";
             document.querySelector("input").style.fontSize = "20px";
-            document.querySelector('input').value = string;
+            document.querySelector('input').value = expression;
         }
     }
      
     else if(evaluate.target.innerHTML == 'C'){
-        string = "";
-        document.querySelector('input').value = string;
+        expression = "";
+        document.querySelector('input').value = expression;
     }
     else if(evaluate.target.innerHTML == 'Delete'){
-        string = string.slice(0,-1);
-     document.querySelector('input').value = string;
+        if (expression.length > 1) {
+            expression = expression.slice(0, -1);
+            document.querySelector('input').value = expression;
+        }
+        else{
+            expression = '';
+            document.querySelector('input').value = expression;
+        }
     }
 
     else{
-        string =string + evaluate.target.innerHTML;
-        document.querySelector('input').value =string;
+        expression =expression + evaluate.target.innerHTML;
+        document.querySelector('input').value =expression;
        }
     })
 })
